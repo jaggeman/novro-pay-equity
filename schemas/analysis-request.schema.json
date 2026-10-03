@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jaggeman/novro-pay-equity/schemas/analysis-request.schema.json",
+  "title": "Pay-equity analysis request",
+  "type": "object",
+  "required": ["employees"],
+  "properties": {
+    "employees": {
+      "type": "array",
+      "items": { "$ref": "employee.schema.json" }
+    },
+    "settings": {
+      "type": "object",
+      "properties": {
+        "minTeamSize": { "type": "integer", "minimum": 3, "default": 3 },
+        "femaleDominatedThreshold": { "type": "number", "minimum": 0, "maximum": 100, "default": 60 },
+        "payGapThreshold": { "type": "number", "minimum": 0, "maximum": 100, "default": 5 },
+        "payBasis": { "enum": ["baseSalary", "baseSalaryAndAllowances"], "default": "baseSalary" }
+      },
+      "additionalProperties": true
+    },
+    "includeVariablePay": { "type": "boolean", "default": false }
+  },
+  "additionalProperties": false
+}

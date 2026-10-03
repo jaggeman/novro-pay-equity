@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jaggeman/novro-pay-equity/schemas/salary-review-request.schema.json",
+  "title": "Salary-review simulation request",
+  "type": "object",
+  "required": ["employees", "rules"],
+  "properties": {
+    "employees": { "type": "array", "items": { "$ref": "employee.schema.json" } },
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["scope", "gender", "valueType", "value"],
+        "properties": {
+          "scope": { "enum": ["All", "Department", "Equal Work Group", "Level"] },
+          "scopeValue": { "type": "string" },
+          "gender": { "enum": ["All", "Female", "Male"] },
+          "valueType": { "enum": ["percentage", "flat"] },
+          "value": { "type": "number", "minimum": -1000000, "maximum": 1000000 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "includePayrollTax": { "type": "boolean", "default": false }
+  },
+  "additionalProperties": false
+}

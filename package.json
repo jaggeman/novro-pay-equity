@@ -1,0 +1,49 @@
+{
+  "name": "@novro/pay-equity-core",
+  "version": "0.1.0",
+  "description": "Open-source calculation engine for pay equity, salary review, correction plans, salary ranges and EU pay-transparency metrics.",
+  "license": "AGPL-3.0-only",
+  "author": "Novro",
+  "homepage": "https://github.com/jaggeman/novro-pay-equity#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaggeman/novro-pay-equity.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jaggeman/novro-pay-equity/issues"
+  },
+  "type": "commonjs",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./pay-equity-basis": "./src/pay-equity-basis.js",
+    "./calculator": "./src/calculator.js",
+    "./salary-revision": "./src/salary-revision-calc.js",
+    "./correction-plans": "./src/correction-plan-calc.js",
+    "./revision-budget": "./src/revision-budget-calc.js",
+    "./salary-ranges": "./src/salary-range-core.js",
+    "./eu-reporting": "./src/eu-pay-reporting-metrics.js"
+  },
+  "files": [
+    "src/",
+    "schemas/",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "example": "node examples/run.js",
+    "check": "npm test && npm run example && npm pack --dry-run"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "pay-equity",
+    "gender-pay-gap",
+    "salary-review",
+    "equal-pay",
+    "eu-pay-transparency"
+  ]
+}

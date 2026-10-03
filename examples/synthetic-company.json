@@ -1,0 +1,14 @@
+[
+  { "id": "E001", "GENDER": "Female", "ROLE": "Engineer", "LEVEL": "Senior", "EQUAL WORK GROUP": "Engineering Senior", "BASE SALARY": 52000, "VARIABLE PAY": 3000, "ALLOWANCES": 1000, "FULL-TIME EQ.": 1, "CURRENCY": "SEK" },
+  { "id": "E002", "GENDER": "Female", "ROLE": "Engineer", "LEVEL": "Senior", "EQUAL WORK GROUP": "Engineering Senior", "BASE SALARY": 51000, "VARIABLE PAY": 2500, "ALLOWANCES": 1000, "FULL-TIME EQ.": 1, "CURRENCY": "SEK" },
+  { "id": "E003", "GENDER": "Female", "ROLE": "Engineer", "LEVEL": "Senior", "EQUAL WORK GROUP": "Engineering Senior", "BASE SALARY": 40000, "VARIABLE PAY": 1800, "ALLOWANCES": 800, "FULL-TIME EQ.": 0.8, "CURRENCY": "SEK" },
+  { "id": "E004", "GENDER": "Male", "ROLE": "Engineer", "LEVEL": "Senior", "EQUAL WORK GROUP": "Engineering Senior", "BASE SALARY": 56000, "VARIABLE PAY": 4000, "ALLOWANCES": 1000, "FULL-TIME EQ.": 1, "CURRENCY": "SEK" },
+  { "id": "E005", "GENDER": "Male", "ROLE": "Engineer", "LEVEL": "Senior", "EQUAL WORK GROUP": "Engineering Senior", "BASE SALARY": 54500, "VARIABLE PAY": 3500, "ALLOWANCES": 1000, "FULL-TIME EQ.": 1, "CURRENCY": "SEK" },
+  { "id": "E006", "GENDER": "Male", "ROLE": "Engineer", "LEVEL": "Senior", "EQUAL WORK GROUP": "Engineering Senior", "BASE SALARY": 53000, "VARIABLE PAY": 3000, "ALLOWANCES": 900, "FULL-TIME EQ.": 1, "CURRENCY": "SEK" },
+  { "id": "E007", "GENDER": "Female", "ROLE": "Analyst", "LEVEL": "Mid", "EQUAL WORK GROUP": "Analytics Mid", "BASE SALARY": 43000, "VARIABLE PAY": 1200, "ALLOWANCES": 500, "FULL-TIME EQ.": 1, "CURRENCY": "SEK" },
+  { "id": "E008", "GENDER": "Female", "ROLE": "Analyst", "LEVEL": "Mid", "EQUAL WORK GROUP": "Analytics Mid", "BASE SALARY": 42000, "VARIABLE PAY": 1000, "ALLOWANCES": 500, "FULL-TIME EQ.": 1, "CURRENCY": "SEK" },
+  { "id": "E009", "GENDER": "Female", "ROLE": "Analyst", "LEVEL": "Mid", "EQUAL WORK GROUP": "Analytics Mid", "BASE SALARY": 41500, "VARIABLE PAY": 900, "ALLOWANCES": 500, "FULL-TIME EQ.": 1, "CURRENCY": "SEK" },
+  { "id": "E010", "GENDER": "Male", "ROLE": "Analyst", "LEVEL": "Mid", "EQUAL WORK GROUP": "Analytics Mid", "BASE SALARY": 44500, "VARIABLE PAY": 1600, "ALLOWANCES": 500, "FULL-TIME EQ.": 1, "CURRENCY": "SEK" },
+  { "id": "E011", "GENDER": "Male", "ROLE": "Analyst", "LEVEL": "Mid", "EQUAL WORK GROUP": "Analytics Mid", "BASE SALARY": 44000, "VARIABLE PAY": 1500, "ALLOWANCES": 500, "FULL-TIME EQ.": 1, "CURRENCY": "SEK" },
+  { "id": "E012", "GENDER": "Male", "ROLE": "Analyst", "LEVEL": "Mid", "EQUAL WORK GROUP": "Analytics Mid", "BASE SALARY": 43500, "VARIABLE PAY": 1400, "ALLOWANCES": 500, "FULL-TIME EQ.": 1, "CURRENCY": "SEK" }
+]

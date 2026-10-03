@@ -1,0 +1,9 @@
+Novro Pay Equity Core
+Copyright (c) 2026 Novro
+
+The initial calculation modules were extracted from Novro Engine at commit
+cd394daab3ac0d19f14c9510a0b2b8e674a052cd. The extraction intentionally
+contains no Novro customer data, Firebase configuration, credentials or
+private repository history.
+
+Commercial licensing may be available from the copyright holder.

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jaggeman/novro-pay-equity/schemas/employee.schema.json",
+  "title": "Pay-equity employee",
+  "type": "object",
+  "required": ["EMAIL", "GENDER", "BASE SALARY"],
+  "properties": {
+    "EMAIL": { "type": "string", "format": "email" },
+    "NAME": { "type": "string" },
+    "GENDER": { "type": "string", "description": "Female, Male or an unknown/other value. Matching is case-insensitive for Female/Male." },
+    "BASE SALARY": { "type": ["number", "string"], "description": "Actual gross monthly base salary in the employee's pay currency." },
+    "FULL-TIME EQ.": { "type": ["number", "string", "null"], "description": "Employment fraction (0.8) or percentage (80). Invalid/missing values fall back to 1 for analysis." },
+    "INCLUDE IN ANALYSIS": { "type": ["boolean", "string", "null"] },
+    "ALLOWANCES": { "type": ["number", "string", "null"] },
+    "VARIABLE PAY": { "type": ["number", "string", "null"] },
+    "ROLE": { "type": ["string", "null"] },
+    "LEVEL": { "type": ["string", "null"] },
+    "LOCATION": { "type": ["string", "null"] },
+    "DEPARTMENT": { "type": ["string", "null"] },
+    "EQUAL WORK GROUP": { "type": ["string", "null"] },
+    "SALARY BAND": { "type": ["string", "null"] },
+    "CURRENCY": { "type": ["string", "null"], "pattern": "^[A-Z]{3}$" },
+    "legalEntityId": { "type": ["string", "null"] },
+    "orgNodeId": { "type": ["string", "null"] },
+    "jobCategoryId": { "type": ["string", "null"] }
+  },
+  "additionalProperties": true
+}
