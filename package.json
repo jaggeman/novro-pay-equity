@@ -1,6 +1,6 @@
 {
   "name": "@novro/pay-equity-core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Open-source calculation engine for pay equity, salary review, correction plans, salary ranges and EU pay-transparency metrics.",
   "license": "AGPL-3.0-only",
   "author": "Novro",
@@ -27,7 +27,14 @@
   "files": [
     "src/",
     "schemas/",
+    "docs/",
+    "examples/",
+    "ARCHITECTURE.md",
+    "CHANGELOG.md",
+    "COMMERCIAL.md",
+    "CONTRIBUTING.md",
     "README.md",
+    "SECURITY.md",
     "LICENSE",
     "NOTICE"
   ],

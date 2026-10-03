@@ -5,7 +5,7 @@ analysis and salary review. It contains the same pure calculation primitives
 used by Novro's pay-mapping and salary-review product, separated from Firebase,
 authentication, storage and customer data.
 
-> **Status:** v0.1.0. The API is usable and tested, but may change before 1.0.
+> **Status:** v0.1.1. The API is usable and tested, but may change before 1.0.
 > The package supports analysis and decision support; it does not by itself
 > produce a legally sufficient filing for any jurisdiction.
 
@@ -24,6 +24,9 @@ The hosted Novro application, Firebase adapters, permissions, workflow state,
 email, document storage and deployment configuration are not part of this repo.
 
 ## Get started in five minutes
+
+This repository is a JavaScript calculation library, not a ready-made web
+interface. You run it with Node.js or include it in your own application.
 
 ### Requirements
 
@@ -44,13 +47,25 @@ npm run example
 [`examples/synthetic-company.json`](examples/synthetic-company.json) and prints
 a pay-equity overview, salary-review budget and EU pay quartiles.
 
-### Option 2: install directly from GitHub
+### Option 2: download a ZIP without Git
+
+1. Open the [latest release](https://github.com/jaggeman/novro-pay-equity/releases/latest).
+2. Under **Assets**, download **Source code (zip)** and extract it.
+3. Open a terminal in the extracted folder and run:
+
+```bash
+npm ci
+npm test
+npm run example
+```
+
+### Option 3: install directly from GitHub
 
 The package is not published to the npm registry yet. Install the current
 GitHub release in another Node.js project with:
 
 ```bash
-npm install github:jaggeman/novro-pay-equity#v0.1.0
+npm install github:jaggeman/novro-pay-equity#v0.1.1
 ```
 
 ### Run your first analysis
@@ -169,6 +184,14 @@ telemetry dependency. The caller remains responsible for access control,
 tenant isolation, encryption, retention, audit logging and lawful processing.
 Read [`docs/privacy-and-anonymity.md`](docs/privacy-and-anonymity.md) before
 exposing results.
+
+`analyzePayEquity` returns aggregates and applies its anonymity gate by default.
+Several lower-level APIs intentionally return personal data:
+`salaryRevision.computeRevisionSimulation` returns cloned employee rows with
+simulated salaries, and salary-range positions describe one employee. Keep
+those results inside the same authorised boundary as the input data. A
+`redacted` flag on one result does not sanitise other objects returned by a
+different API.
 
 ## Provenance and licensing
 
