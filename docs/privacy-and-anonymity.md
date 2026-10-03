@@ -17,5 +17,22 @@ Minimum integration controls:
 The `redact: false` option is intended for a trusted server-side or otherwise
 explicitly authorised context. Do not let an untrusted client choose it.
 
+## Know which outputs contain employee rows
+
+`analyzePayEquity` returns aggregates and is anonymity-gated by default.
+Lower-level APIs have different purposes and disclosure boundaries:
+
+- `salaryRevision.computeRevisionSimulation` returns `simulatedEmployees`, a
+  cloned row for every input employee with the simulated salary. Treat it as
+  raw salary data.
+- `salaryRanges.positionInRange` returns a position derived from one person's
+  salary. Treat it as personal data.
+- EU metric builders return aggregate objects, but the host must honour their
+  `redacted` fields and must not combine overlapping reports to infer a hidden
+  group.
+
+Do not return an entire library result to a browser merely because one field is
+redacted. Select the specific aggregate fields that the authorised user needs.
+
 Synthetic examples in this repository do not represent real people or a real
 organisation.

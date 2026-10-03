@@ -91,6 +91,36 @@ test("uses FTE-normalised pay for salary-range position", () => {
   assert.equal(result.status, "within");
 });
 
+test("validates and resolves salary ranges from the installed core", () => {
+  const range = {
+    id: "senior-se",
+    name: "Senior engineer",
+    dimension: { type: "level", value: "Senior" },
+    appliesTo: {},
+    currency: "SEK",
+    min: 40000,
+    mid: 50000,
+    max: 60000,
+    effectiveFrom: "2026-01-01",
+    status: "active"
+  };
+  const context = {
+    scope: {},
+    pay: { defaultCurrency: "SEK", entities: {} }
+  };
+
+  const validation = Novro.salaryRanges.validateSalaryRangeInput(range, context);
+  assert.deepEqual(validation.errors, []);
+
+  const resolved = Novro.salaryRanges.resolveSalaryRange(
+    person("Female", 45000, { LEVEL: "Senior" }),
+    [range],
+    "2026-10-03",
+    context
+  );
+  assert.equal(resolved.range.id, "senior-se");
+});
+
 test("builds four EU pay quartiles from eligible employees", () => {
   const rows = Array.from({ length: 12 }, (_, i) => person(i % 2 ? "Male" : "Female", 30000 + i * 1000));
   const result = Novro.euReporting.buildPayQuartiles(rows, { minTeamSize: 3 });
